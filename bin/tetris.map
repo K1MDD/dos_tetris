@@ -1,0 +1,274 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       19/02/28 13:24:41
+Warning! W1027: file game.obj(D:\Programming\WATCOM\TETRIS\src\game.c): redefinition of _scores ignored
+Warning! W1027: file input.obj(D:\Programming\WATCOM\TETRIS\src\input.c): redefinition of _key ignored
+Warning! W1027: file main.obj(D:\Programming\WATCOM\TETRIS\src\main.c): redefinition of _scores ignored
+Warning! W1027: file main.obj(D:\Programming\WATCOM\TETRIS\src\main.c): redefinition of _title ignored
+Warning! W1027: file main.obj(D:\Programming\WATCOM\TETRIS\src\main.c): redefinition of _clock_ticks ignored
+Warning! W1027: file main.obj(D:\Programming\WATCOM\TETRIS\src\main.c): redefinition of _stats ignored
+Warning! W1027: file main.obj(D:\Programming\WATCOM\TETRIS\src\main.c): redefinition of _key ignored
+Warning! W1027: file timer.obj(D:\Programming\WATCOM\TETRIS\src\timer.c): redefinition of _clock_ticks ignored
+Executable Image: tetris.exe
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0415:0000            000014c0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+disk_TEXT              CODE           AUTO           0000:0000       0000044b
+game_TEXT              CODE           AUTO           0000:044b       00001d91
+input_TEXT             CODE           AUTO           0000:21dc       000000bf
+main_TEXT              CODE           AUTO           0000:229b       00000924
+screen_TEXT            CODE           AUTO           0000:2bbf       00000809
+timer_TEXT             CODE           AUTO           0000:33c8       00000104
+_TEXT                  CODE           AUTO           0000:34cc       00000c76
+FAR_DATA               FAR_DATA       AUTO           0414:0002       00000000
+_NULL                  BEGDATA        DGROUP         0415:0000       00000020
+_AFTERNULL             BEGDATA        DGROUP         0417:0000       00000002
+CONST                  DATA           DGROUP         0417:0002       0000013a
+CONST2                 DATA           DGROUP         042a:000c       00000000
+_DATA                  DATA           DGROUP         042a:000c       000006f2
+XIB                    DATA           DGROUP         0499:000e       00000000
+XI                     DATA           DGROUP         0499:000e       00000006
+XIE                    DATA           DGROUP         049a:0004       00000000
+YIB                    DATA           DGROUP         049a:0004       00000000
+YI                     DATA           DGROUP         049a:0004       00000000
+YIE                    DATA           DGROUP         049a:0004       00000000
+STRINGS                DATA           DGROUP         049a:0004       00000000
+DATA                   DATA           DGROUP         049a:0004       00000000
+_BSS                   BSS            DGROUP         049a:0004       0000046a
+STACK                  STACK          DGROUP         04e1:0000       00000800
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: disk.obj(D:\Programming\WATCOM\TETRIS\src\disk.c)
+0000:0000      load_scores_
+0000:0283      save_scores_
+0000:03d5+     get_score_sheet_handle_
+0415:0854      _scores
+Module: game.obj(D:\Programming\WATCOM\TETRIS\src\game.c)
+0000:044b      init_pause_screen_
+0000:053f      update_stats_
+0000:05d3      title_screen_
+0000:0986      show_high_scores_
+0000:0ce3      init_stats_
+0000:0d51      gen_piece_
+0000:0dae      gen_type_
+0000:0e49      get_piece_grid_
+0000:18ef+     get_intersection_
+0000:19aa      get_width_
+0000:1a77      get_height_
+0000:1b2e      draw_piece_
+0000:1c6c      draw_next_piece_
+0000:1d1f+     draw_intersection_
+0000:1f75      rotate_piece_
+0000:20ac      move_piece_left_
+0000:2112      move_piece_right_
+0000:2177      move_piece_down_
+0415:015c      _stats
+0415:0163      _title
+0415:08f4      _clock_ticks
+0415:08f6      _key
+Module: input.obj(D:\Programming\WATCOM\TETRIS\src\input.c)
+0000:21dc+     keyboard_isr_
+0000:2223      init_kbd_
+0000:2269      return_kbd_
+0415:08f8+     _prev_int_09
+Module: main.obj(D:\Programming\WATCOM\TETRIS\src\main.c)
+0000:229b      main_
+Module: screen.obj(D:\Programming\WATCOM\TETRIS\src\screen.c)
+0000:2bbf      draw_frame_
+0000:2d81+     get_box_color_
+0000:2df4      draw_box_
+0000:2e52      check_box_
+0000:2ea6      del_row_
+0000:2eed      del_box_
+0000:2f43      write_char_
+0000:2fa4      change_page_
+0000:2fec      scroll_page_up_
+0000:304a      scroll_game_down_
+0000:30a9      write_string_
+0000:313e      write_num_
+0000:3248+     read_char_
+0000:3297+     set_video_mode_
+0000:32da      move_cursor_
+0000:3330      return_screen_
+0000:3381      init_screen_
+Module: timer.obj(D:\Programming\WATCOM\TETRIS\src\timer.c)
+0000:33c8+     timer_isr_
+0000:3410      init_timer_
+0000:3456      return_timer_
+0000:3488      clock_ticks_since_midnight_
+0415:0cb0+     _prev_int_1C
+Module: C:\WATCOM/lib286/dos\clibl.lib(stk)
+0000:34d1      __STK
+0000:34f1*     __STKOVERFLOW_
+Module: C:\WATCOM/lib286/dos\clibl.lib(dosio)
+0000:350e      _dos_read_
+0000:3531      _dos_write_
+Module: C:\WATCOM/lib286/dos\clibl.lib(filedos.c)
+0000:3541      _dos_close_
+0000:354f*     _dos_commit_
+Module: C:\WATCOM/lib286/dos\clibl.lib(i4m)
+0000:3560*     __I4M
+0000:3560      __U4M
+Module: C:\WATCOM/lib286/dos\clibl.lib(creatdos.c)
+0000:3578      _dos_creat_
+0000:359c      _dos_creatnew_
+Module: C:\WATCOM/lib286/dos\clibl.lib(i4d)
+0000:35be*     __I4D
+0000:360d      __U4D
+Module: C:\WATCOM/lib286/dos\clibl.lib(opendos.c)
+0000:3691      _dos_open_
+Module: C:\WATCOM/lib286/dos\clibl.lib(cmodel)
+0000:36b8      _big_code_
+0000:36b8*     CodeModelMismatch
+Module: C:\WATCOM/lib286/dos\clibl.lib(rand.c)
+0000:36b8      rand_
+0000:36fa      srand_
+Module: C:\WATCOM/lib286/dos\clibl.lib(bioskeyb.c)
+0000:371d      _bios_keybrd_
+Module: C:\WATCOM/lib286/dos\clibl.lib(d_getvec.c)
+0000:3722      _dos_getvect_
+Module: C:\WATCOM/lib286/dos\clibl.lib(d_setvec.c)
+0000:372d      _dos_setvect_
+Module: C:\WATCOM/lib286/dos\clibl.lib(cstart)
+0415:0000*     __nullarea
+0415:07fc*     __ovlflag
+0415:07fd*     __intno
+0415:07fe*     __ovlvec
+0000:373a      _cstart_
+0000:380d*     _Not_Enough_Memory_
+0000:3941      __exit_
+0000:3960      __do_exit_with_msg__
+0000:39be      __GETDS
+Module: C:\WATCOM/lib286/dos\clibl.lib(intx086.c)
+0000:39c8+     int86x_
+0000:3a61      int86_
+Module: C:\WATCOM/lib286/dos\clibl.lib(strlen.c)
+0000:3a8e      strlen_
+Module: C:\WATCOM/lib286/dos\clibl.lib(chainint)
+0000:3aa4      _chain_intr_
+Module: C:\WATCOM/lib286/dos\clibl.lib(xmsg.c)
+0000:3ac4*     __exit_with_msg_
+0000:3ac9      __fatal_runtime_error_
+Module: C:\WATCOM/lib286/dos\clibl.lib(crwdata)
+0415:0802      __curbrk
+0415:080a      __STACKLOW
+0415:080c      __STACKTOP
+0415:080e      __cbyte
+0415:0810      __child
+0415:0812      __no87
+0415:0820      ___FPE_handler
+0415:0804      __psp
+0415:0814      __get_ovl_stack
+0415:0818      __restore_ovl_stack
+0415:081c      __close_ovl_file
+0415:0824      __LpCmdLine
+0415:0828      __LpPgmName
+0415:0806      __osmajor
+0415:0807      __osminor
+0415:0808      __osmode
+0415:0809      __HShift
+Module: C:\WATCOM/lib286/dos\clibl.lib(doserror)
+0000:3ae8      __doserror_
+Module: C:\WATCOM/lib286/dos\clibl.lib(biosfunc)
+0000:3af6*     __ibm_bios_equiplist_
+0000:3af9      __ibm_bios_keybrd_
+0000:3b0e*     __ibm_bios_memsize_
+0000:3b11*     __ibm_bios_printer_
+0000:3b1c*     __ibm_bios_serialcom_
+Module: C:\WATCOM/lib286/dos\clibl.lib(cmain086.c)
+0000:3b23      __CMain
+Module: C:\WATCOM/lib286/dos\clibl.lib(initrtns.c)
+0000:3b89      __InitRtns
+0000:3b89*     __FInitRtns
+0000:3be4      __FiniRtns
+0000:3be4*     __FFiniRtns
+Module: C:\WATCOM/lib286/dos\clibl.lib(uselfn.c)
+0415:082c      ___uselfn
+Module: C:\WATCOM/lib286/dos\clibl.lib(dosseg)
+0000:3c48      __DOSseg__
+Module: C:\WATCOM/lib286/dos\clibl.lib(intr.c)
+0000:3c49      intr_
+Module: C:\WATCOM/lib286/dos\clibl.lib(segread.c)
+0000:3c5d      segread_
+Module: C:\WATCOM/lib286/dos\clibl.lib(enterdb.c)
+0000:3c7d      __EnterWVIDEO_
+0415:082e+     ___WD_Present
+Module: C:\WATCOM/lib286/dos\clibl.lib(dosret.c)
+0000:3ca1*     _dosretax_
+0000:3ca6*     _dosret0_
+0000:3cad      __set_errno_dos_
+0000:3d0b*     __set_errno_dos_reterr_
+Module: C:\WATCOM/lib286/dos\clibl.lib(___argc.c)
+0415:0cb4      ____Argv
+0415:0cb8      ____Argc
+Module: C:\WATCOM/lib286/dos\clibl.lib(amblksiz.c)
+0415:0844      __amblksiz
+Module: C:\WATCOM/lib286/dos\clibl.lib(exit.c)
+0000:3d16+     __null_int23_exit_
+0000:3d17      exit_
+0000:3d48*     _exit_
+0415:0846+     ___int23_exit
+0415:084a+     ___FPE_handler_exit
+Module: C:\WATCOM/lib286/dos\clibl.lib(sgdef086)
+0415:084e      __Start_XI
+0415:0854      __End_XI
+0415:0854      __Start_YI
+0415:0854      __End_YI
+Module: C:\WATCOM/lib286/dos\clibl.lib(dointr)
+0000:3d62      _DoINTR_
+Module: C:\WATCOM/lib286/dos\clibl.lib(seterrno.c)
+0000:40db      __set_errno_
+0000:40ef*     __set_EDOM_
+0000:4101*     __set_ERANGE_
+0000:4113*     __set_EINVAL_
+0000:4128      __set_doserrno_
+Module: C:\WATCOM/lib286/dos\clibl.lib(errno.c)
+0000:4134      __get_errno_ptr_
+0000:413b      __get_doserrno_ptr_
+0415:0cba+     _errno
+0415:0cbc+     __doserrno
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM/lib286/dos\clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0800 (2048.)
+Memory size:  5610 (22032.)
+Entry point address: 0000:373a
+Link time: 00:00.16
