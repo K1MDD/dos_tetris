@@ -1,0 +1,6 @@
+..\src\timer.c(22): Warning! W131: No prototype found for function 'outp'
+..\src\timer.c(22): Warning! W131: No prototype found for function 'inp'
+..\src\timer.c(22): Warning! W308: The function 'inp' without prototyped parameters called
+..\src\timer.c(22): Note! I2002: 'inp' defined in: ..\src\timer.c(22)
+..\src\timer.c(22): Warning! W308: The function 'outp' without prototyped parameters called
+..\src\timer.c(22): Note! I2002: 'outp' defined in: ..\src\timer.c(22)

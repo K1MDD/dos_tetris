@@ -5,6 +5,7 @@
 	2/28/2019*/
 	
 #include "..\include\timer.h"
+#include "..\include\sound.h"
 #include <dos.h>
 #include <i86.h>
 
@@ -15,6 +16,14 @@ void (__interrupt __far *prev_int_1C)(void);	//Stores existing INT 1C ISV, chain
 void __interrupt __far timer_isr(void)			//INT 1C Handler
 {
 	clock_ticks ++;				//Increment clock_ticks counter
+	if(target_speaker_ticks > 0 && speaker_ticks >= target_speaker_ticks)
+	{
+		target_speaker_ticks = 0;
+		outp(0x61, inp(0x61) & 0xFC);
+	}
+	
+	speaker_ticks ++;
+	//printf("int\n");
 	_chain_intr(prev_int_1C);	//Execute existing INT 1C ISR
 }
 

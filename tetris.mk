@@ -1,3 +1,3 @@
-project : D:\Programming\WATCOM\TETRIS\bin\tetris.exe .SYMBOLIC
+project : C:\git\dos_tetris\bin\tetris.exe .SYMBOLIC
 
-!include D:\Programming\WATCOM\TETRIS\bin\tetris.mk1
+!include C:\git\dos_tetris\bin\tetris.mk1

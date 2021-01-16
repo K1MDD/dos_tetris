@@ -1,58 +1,58 @@
 !define BLANK ""
-D:\Programming\WATCOM\TETRIS\bin\disk.obj : D:\Programming\WATCOM\TETRIS\src&
-\disk.c .AUTODEPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
+C:\git\dos_tetris\bin\disk.obj : C:\git\dos_tetris\src\disk.c .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
  *wcc ..\src\disk.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj -&
 ml
 
-D:\Programming\WATCOM\TETRIS\bin\game.obj : D:\Programming\WATCOM\TETRIS\src&
-\game.c .AUTODEPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
+C:\git\dos_tetris\bin\game.obj : C:\git\dos_tetris\src\game.c .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
  *wcc ..\src\game.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj -&
 ml
 
-D:\Programming\WATCOM\TETRIS\bin\input.obj : D:\Programming\WATCOM\TETRIS\sr&
-c\input.c .AUTODEPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
+C:\git\dos_tetris\bin\input.obj : C:\git\dos_tetris\src\input.c .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
  *wcc ..\src\input.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj &
 -ml
 
-D:\Programming\WATCOM\TETRIS\bin\main.obj : D:\Programming\WATCOM\TETRIS\src&
-\main.c .AUTODEPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
- *wcc ..\src\main.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj -&
-ml
-
-D:\Programming\WATCOM\TETRIS\bin\screen.obj : D:\Programming\WATCOM\TETRIS\s&
-rc\screen.c .AUTODEPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
+C:\git\dos_tetris\bin\screen.obj : C:\git\dos_tetris\src\screen.c .AUTODEPEN&
+D
+ @C:
+ cd C:\git\dos_tetris\bin
  *wcc ..\src\screen.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj&
  -ml
 
-D:\Programming\WATCOM\TETRIS\bin\timer.obj : D:\Programming\WATCOM\TETRIS\sr&
-c\timer.c .AUTODEPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
+C:\git\dos_tetris\bin\sound.obj : C:\git\dos_tetris\src\sound.c .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
+ *wcc ..\src\sound.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj &
+-ml
+
+C:\git\dos_tetris\bin\test.obj : C:\git\dos_tetris\src\test.c .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
+ *wcc ..\src\test.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj -&
+ml
+
+C:\git\dos_tetris\bin\timer.obj : C:\git\dos_tetris\src\timer.c .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
  *wcc ..\src\timer.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj &
 -ml
 
-D:\Programming\WATCOM\TETRIS\bin\tetris.exe : D:\Programming\WATCOM\TETRIS\b&
-in\disk.obj D:\Programming\WATCOM\TETRIS\bin\game.obj D:\Programming\WATCOM\&
-TETRIS\bin\input.obj D:\Programming\WATCOM\TETRIS\bin\main.obj D:\Programmin&
-g\WATCOM\TETRIS\bin\screen.obj D:\Programming\WATCOM\TETRIS\bin\timer.obj D:&
-\Programming\WATCOM\TETRIS\include\disk.h D:\Programming\WATCOM\TETRIS\inclu&
-de\game.h D:\Programming\WATCOM\TETRIS\include\input.h D:\Programming\WATCOM&
-\TETRIS\include\screen.h D:\Programming\WATCOM\TETRIS\include\timer.h .AUTOD&
-EPEND
- @D:
- cd D:\Programming\WATCOM\TETRIS\bin
- @%write tetris.lk1 FIL disk.obj,game.obj,input.obj,main.obj,screen.obj,time&
-r.obj
+C:\git\dos_tetris\bin\tetris.exe : C:\git\dos_tetris\bin\disk.obj C:\git\dos&
+_tetris\bin\game.obj C:\git\dos_tetris\bin\input.obj C:\git\dos_tetris\bin\s&
+creen.obj C:\git\dos_tetris\bin\sound.obj C:\git\dos_tetris\bin\test.obj C:\&
+git\dos_tetris\bin\timer.obj C:\git\dos_tetris\include\disk.h C:\git\dos_tet&
+ris\include\game.h C:\git\dos_tetris\include\input.h C:\git\dos_tetris\inclu&
+de\screen.h C:\git\dos_tetris\include\sound.h C:\git\dos_tetris\include\soun&
+d_track.h C:\git\dos_tetris\include\timer.h .AUTODEPEND
+ @C:
+ cd C:\git\dos_tetris\bin
+ @%write tetris.lk1 FIL disk.obj,game.obj,input.obj,screen.obj,sound.obj,tes&
+t.obj,timer.obj
  @%append tetris.lk1 
  *wlink name tetris d all sys dos op m op maxe=25 op q op symf @tetris.lk1
 
